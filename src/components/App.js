@@ -1,24 +1,18 @@
-import React, { useState } from "react";
+import React,{useState} from "react";
 import LoginForm from "./LoginForm";
 
-function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+function App(){
+  const [isLoggedIn,setIsLoggedIn]=useState(false);
 
-  const handleLogin = () => {
-    setIsLoggedIn(true);
+  const handleLogin = () =>{
+    setIsLoggedIn=true;
   };
-
   return (
     <div>
-      <h1>Lift State Up Demo</h1>
-
-      {isLoggedIn ? (
-        <h2>Welcome! You are logged in.</h2>
-      ) : (
-        <LoginForm isLoggedIn={isLoggedIn} onLogin={handleLogin} />
-      )}
+    <h1>Lift State Up Demo</h1>
+  {
+    isLoggedIn ? (<h1>You are successfully logged in</h1>) : <LoginForm isLoggedIn={isLoggedIn} onLogin={handleLogin}/>
+  }
     </div>
-  );
+  )
 }
-
-export default App;
